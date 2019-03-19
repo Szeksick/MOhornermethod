@@ -10,6 +10,7 @@ import javafx.scene.control.TextField;
 public class Controller {
     @FXML private TextField inx;
     @FXML private TextField polynominal;
+    @FXML private TextField resultinput;
 
     private String polynom;
 
@@ -33,6 +34,7 @@ public class Controller {
                     System.out.println(result);
                     result = result * x + Float.parseFloat(parts[i]);
                     }
+                    resultinput.setText(String.valueOf(result));
                 }
             catch (Exception exept) {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
