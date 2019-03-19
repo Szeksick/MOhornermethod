@@ -3,14 +3,13 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<GridPane alignment="center" hgap="10" prefHeight="404.0" prefWidth="594.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<GridPane alignment="center" hgap="10" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="623.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <columnConstraints>
       <ColumnConstraints />
       <ColumnConstraints />
@@ -18,7 +17,6 @@
    <rowConstraints>
       <RowConstraints />
       <RowConstraints maxHeight="274.0" minHeight="10.0" prefHeight="113.0" />
-      <RowConstraints maxHeight="279.0" minHeight="6.0" prefHeight="271.0" />
    </rowConstraints>
    <children>
       <Button fx:id="calc_btn" mnemonicParsing="false" onAction="#Calculate" prefHeight="24.0" prefWidth="61.0" text="Oblicz" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
@@ -26,31 +24,62 @@
             <Insets right="20.0" top="20.0" />
          </GridPane.margin>
       </Button>
-      <TextField fx:id="polynominal" prefHeight="25.0" prefWidth="493.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+      <TextField fx:id="polynominal" prefHeight="25.0" prefWidth="493.0" promptText="np. 1x^4-3.5x^3+0x^2+2x^1-1" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
          <GridPane.margin>
             <Insets left="20.0" right="100.0" top="20.0" />
          </GridPane.margin>
       </TextField>
-      <TextField fx:id="inx" maxWidth="-Infinity" prefHeight="25.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+      <TextField fx:id="inx" maxWidth="-Infinity" prefHeight="25.0" prefWidth="58.0" promptText="np. 2.5" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
          <GridPane.margin>
-            <Insets right="100.0" top="20.0" />
+            <Insets right="100.0" top="60.0" />
          </GridPane.margin>
       </TextField>
-      <Label text="Wpisz wielomian w formie:" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+      <Label text="W tym polu proszę wpisać wielomian:" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
          <GridPane.margin>
             <Insets left="20.0" />
          </GridPane.margin>
       </Label>
-      <Label text="X=" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+      <Label text="X=" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
          <GridPane.margin>
-            <Insets right="160.0" top="20.0" />
+            <Insets right="160.0" top="65.0" />
          </GridPane.margin>
       </Label>
-      <TableView fx:id="resultab" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-        <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
-        </columns>
-      </TableView>
+      <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="337.0" text="W celu otrzymania prawidłowego wyniku: " textOverrun="CLIP" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets left="30.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="74.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="337.0" text="# przed pominietym współczynnikiem proszę wstawić zero np. 0x^2)" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font size="9.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="30.0" top="30.0" />
+         </GridPane.margin>
+      </Label>
+      <Label layoutX="50.0" layoutY="89.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="337.0" text="# x proszę wprowadzić jako x^1" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font size="9.0" />
+         </font>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets top="60.0" />
+         </GridPane.margin>
+      </Label>
+      <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="407.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets bottom="20.0" right="20.0" />
+         </GridPane.margin>
+      </TextField>
+      <Label text="Wynik:" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets bottom="20.0" left="100.0" />
+         </GridPane.margin>
+      </Label>
    </children>
 </GridPane>
